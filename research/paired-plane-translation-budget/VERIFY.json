@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "python": "3.12",
+  "requirements": [],
+  "inputs": [
+    "certificates/selected-result.json",
+    "docs/research/agent-task-catalog.json",
+    "research/complex-local-word-ceiling/ceiling.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "-I",
+        "-B",
+        "{package}/verify.py"
+      ],
+      "timeout_seconds": 120,
+      "checks": "Source pins; incumbent ceiling; mixed query arithmetic; centre/idle bookkeeping; zero-charge positive control; direct 56-child failure; all sharp thresholds; RESULT.json byte match."
+    }
+  ]
+}
